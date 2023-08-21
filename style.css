@@ -1,0 +1,98 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkblue;
+}
+
+.socials {
+    display: flex;
+}
+
+.navigation a {
+    padding-left: 2.5rem;
+    text-decoration: none;
+    
+}
+
+.navigation a:hover {
+    cursor: pointer;
+    color: purple;
+    text-decoration: underline;
+}
+
+.main {
+    padding: 2rem;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main img {
+    height: 300px;
+    width: auto;
+    border: 0.5rem solid darkblue;
+    border-radius: 5%;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.main-text h1 {
+    font-size: 2rem;
+}
+
+.code {
+    padding: 2rem;
+    background-color: darkturquoise;
+}
+
+.code h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    background-color: darkblue;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fsocial img {
+    height: 25px;
+    width: 25px;
+    padding: 0.5rem;
+}
