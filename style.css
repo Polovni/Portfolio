@@ -5,6 +5,12 @@ html {
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
 }
 
 nav {
@@ -15,28 +21,30 @@ nav {
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    background-color: darkblue;
+    background-color: #054ada;
 }
 
 .socials {
     display: flex;
+    color: #f80;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .navigation a {
     padding-left: 2.5rem;
     text-decoration: none;
-    
+    color: rgba(255,255,255,.6);
 }
 
 .navigation a:hover {
-    cursor: pointer;
-    color: purple;
-    text-decoration: underline;
+    color: #f80;
+    transition: 0.3s ease-in-out;
 }
 
 .main {
     padding: 2rem;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -47,8 +55,8 @@ nav {
 .main img {
     height: 300px;
     width: auto;
-    border: 0.5rem solid darkblue;
-    border-radius: 5%;
+    border: 2px solid #f80;
+    border-radius: 2%;
 }
 
 .main-text {
@@ -59,29 +67,109 @@ nav {
 }
 
 .main-text h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.tags {
+    color: #f80;
+}
+
+.contact {
+    color: white;
+    border-color: transparent;
+    background-color: #f80;
+}
+
+.contact:hover {
+    background-color: rgb(208, 114, 8);
 }
 
 .code {
     padding: 2rem;
-    background-color: darkturquoise;
+    background-color: black;
 }
 
-.code h2 {
-    font-size: 1.5rem;
-    text-align: center;
+.chart-wrap{
+  width: 100%;
+  height: 600px;
+  font-family:sans-serif;
+  padding-bottom: 2rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: center;
+.title {
+    text-align:center; 
+    color: white;
+    font-size: 2rem;
 }
+
+h2 .tags {
+    font-size: 1.25rem;
+}
+
+.grid{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  border-bottom:2px solid #054ada;
+  background:repeating-linear-gradient(0deg,transparent,transparent 19.5%,fadeout(#054ada ,30%) 20%);
+}
+
+.bar {
+    background-color: #f80;
+    width: 50px;
+    height: var(--bar-value);
+    align-self:flex-end;
+    margin:0 auto;
+    border-radius:3px 3px 0 0;
+    position:relative;
+}
+
+.bar:hover{
+    opacity:0.7;
+}
+
+.bar::after{
+    content:attr(data-name);
+    top:-3em;
+    padding:10px;
+    display:inline-block;
+    white-space:nowrap;
+    position:absolute;
+    transform:rotate(-45deg);
+}
+
+.horizontal{
+  flex-direction:column;
+  border-bottom:none;
+  border-left:2px solid #054ada;
+  background:repeating-linear-gradient(90deg,transparent,transparent 19.5%,fadeout(#054ada,30%) 20%);
+}
+
+.bar{
+    height: 45px;
+    width: var(--bar-value);
+    align-self:flex-start;
+    margin:auto 0 auto 0;
+    border-radius:0 3px 3px 0;     
+}
+
+.bar::after{
+    top:initial;
+    left:100%;
+    padding:0 10px;
+    display:inline-block;
+    white-space:nowrap;
+    position:absolute;
+    transform:rotate(0deg);
+    line-height:45px;
+    color: #f80;
+} 
 
 footer {
-    background-color: darkblue;
+    background-color: #054ada;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;

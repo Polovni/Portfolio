@@ -2,6 +2,9 @@
     <head>
         <title>Luka's Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav>
@@ -21,30 +24,27 @@
                 <img src="./images/photoofme.enc" alt="">
             </div>
             <div class="main-text">
-                <h1>Luka Polovic Full Stack Developer</h1>
+                <h1><span class="tags">&lt;h1&gt;</span>Luka Polovic Full Stack Developer<span class="tags">&lt;/h1&gt;</span></h1>
                 <p>A detailed description of me</p>
+                <a href="#">
+                    <button class="contact">Contact Me</button>
+                </a>
             </div>
         </section>
 
         <section class="code">
-            <h2>My programming languages knowledge</h2>
-            <div class="row">
-                <div class="col">
-                    <p>Python</p>
+            <div class="chart-wrap">
+                <h2 class="title"><span class="tags">&lt;h2&gt;</span>My Language Proficiency<span class="tags">&lt;/h2&gt;</span></h2>
+                <div class="grid horizontal">
+                      <div class="bar" style="--bar-value:38%;" data-name="Python" title="5 Projects"></div>
+                     <div class="bar" style="--bar-value:23%;" data-name="HTML & CSS" title="3 Projects"></div>
+                      <div class="bar" style="--bar-value:15%;" data-name="JavaScript" title="2 Projects"></div>
+                      <div class="bar" style="--bar-value:7%;" data-name="Java" title="1 Project"></div>
+                      <div class="bar" style="--bar-value:30%;" data-name="C++" title="4 Projects (Uni)"></div>
+                      <div class="bar" style="--bar-value:7%;" data-name="PHP" title="1 Project (Work)"></div>
+                      <div class="bar" style="--bar-value:15%;" data-name="C#" title="2 Projects"></div>    
                 </div>
-                <div class="col">
-                    <p>Java</p>
-                </div>
-                <div class="col">
-                    <p>JavaScript</p>
-                </div>
-                <div class="col">
-                    <p>HTML & CSS</p>
-                </div>
-                <div class="col">
-                    <p>C++</p>
-                </div>
-            </div>
+              </div>
         </section>
 
         <footer>
