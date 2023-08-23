@@ -184,8 +184,47 @@ h2 .tags {
     color: #f80;
 } 
 
+form {
+    background-color: black;
+    border: 2px solid #054ada;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+input {
+    background-color: #f80;
+    border: 1px solid #f80;
+    padding: 0.5rem;
+    width: 70%;
+}
+
+input[type=submit] {
+    color: white;
+    border-radius: 5%;
+    width: 25%;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(208, 114, 8);
+}
+
+textarea {
+    background-color: #f80;
+    color: white;
+    border: 1px solid #f80;
+    padding: 0.5rem;
+}
+
+label {
+    color: white;
+}
+
 footer {
     background-color: #054ada;
+    color: rgba(255,255,255,.6);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
