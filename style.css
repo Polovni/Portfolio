@@ -88,13 +88,29 @@ nav {
 .code {
     padding: 2rem;
     background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote {
+    background-color: #f80;
+    padding: 1rem;
+    width: 30%;
+}
+
+h3 { 
+    color: white;
+    font-weight: 400;
 }
 
 .chart-wrap{
-  width: 100%;
+  width: 60%;
   height: 600px;
   font-family:sans-serif;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
 }
 
 .title {
