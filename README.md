@@ -14,8 +14,8 @@ Feel free to explore the repository and my portfolio website to learn more about
 
 ## Home
 
-My name is [Luka Polović], and I'm a passionate web developer with a focus on 
-[full-stack development]. This portfolio is a representation of my journey, projects, and skills in the world of web development.
+My name is Luka Polović, and I'm a passionate web developer with a focus on 
+Full-stack development. This portfolio is a representation of my journey, projects, and skills in the world of web development.
 
 ## Projects
 
@@ -41,5 +41,6 @@ I'm always excited to connect with fellow developers, potential clients, or anyo
 
 - Email: [luka.polovic11@gmail.com](mailto:luka.polovic11@gmail.com)
 - LinkedIn: [Luka Polović](https://www.linkedin.com/in/luka-polovic-367910259/)
+- Personal Website:[Luka's Portfolio](https://polovni.github.io/Portfolio/#) 
 
 Feel free to connect with me.
