@@ -42,6 +42,23 @@ nav {
     transition: 0.3s ease-in-out;
 }
 
+.menu-btn {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #054ada;
+}
+
+.menu-btn.open + .dropdown {
+    display: flex;
+}
+
 .main {
     padding: 2rem;
     background-color: white;
@@ -57,18 +74,24 @@ nav {
     width: auto;
     border: 2px solid #f80;
     border-radius: 2%;
+    margin: 1rem;
 }
 
 .main-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
 }
 
 .main-text h1 {
     font-size: 2.5rem;
     color: black;
+}
+
+.main-text p {
+    width: 40%;
+    font-size: 1.25rem;
 }
 
 .tags {
@@ -113,7 +136,6 @@ h3 {
 .chart-wrap{
   width: 60%;
   height: 600px;
-  font-family:sans-serif;
   padding-bottom: 6rem;
 }
 
@@ -131,16 +153,13 @@ h2 .tags {
   width:100%;
   height:100%;
   display:flex;
-  flex-direction:row;
   justify-content:center;
-  border-bottom:2px solid #054ada;
-  background:repeating-linear-gradient(0deg,transparent,transparent 19.5%,fadeout(#054ada ,30%) 20%);
 }
 
 .bar {
     background-color: #f80;
     width: 50px;
-    height: var(--bar-value);
+    height: calc(var(--bar-value)*2.5);
     align-self:flex-end;
     margin:0 auto;
     border-radius:3px 3px 0 0;
@@ -165,12 +184,11 @@ h2 .tags {
   flex-direction:column;
   border-bottom:none;
   border-left:2px solid #054ada;
-  background:repeating-linear-gradient(90deg,transparent,transparent 19.5%,fadeout(#054ada,30%) 20%);
 }
 
 .bar{
     height: 45px;
-    width: var(--bar-value);
+    width: calc(var(--bar-value)*2.5);
     align-self:flex-start;
     margin:auto 0 auto 0;
     border-radius:0 3px 3px 0;     
@@ -243,4 +261,117 @@ footer {
     height: 25px;
     width: 25px;
     padding: 0.5rem;
+}
+
+@media only screen and (max-width: 1075px) {
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .main-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .chart-wrap{
+        width: 100%;
+        height: 600px;
+        font-family:sans-serif;
+        padding-bottom: 6rem;
+    }
+
+    .code {
+        padding: 2rem;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .main-text p {
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    .contact {
+        width: 10rem;
+        height: 4rem;
+        margin: 1rem;
+    }
+
+    .quote {
+        width: 70%;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    .quote h3 {
+        font-size: 1.25rem;
+    }
+
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger {
+        width: 35px;
+        height: 5px;
+        background-color: #f80;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .menu-btn__burger::before, .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 5px;
+        background-color: #f80;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .menu-btn__burger::before {
+        transform: translateY(-10px);
+    }
+    
+    .menu-btn__burger::after {
+        transform: translateY(10px);
+    }
+    
+    .menu-btn.open .menu-btn__burger {
+        transform: translateX(-30px);
+        background: transparent;
+    }
+    
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg);
+    }
+    
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg);
+    }
+
+    .navigation {
+        display: none;
+    }
 }
