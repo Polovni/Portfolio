@@ -13,50 +13,92 @@ span {
     font-size: 1.5rem;
 }
 
-nav {
+.navbar {
     display: flex;
-    height: 4rem;
-    padding: 0 1.5rem;
-    flex-wrap: wrap;
-    align-content: center;
     justify-content: space-between;
     align-items: center;
     background-color: #054ada;
+    width: 100%;
 }
 
 .socials {
-    display: flex;
     color: #f80;
     font-size: 1rem;
+    margin: 0.5rem;
     font-family: 'Press Start 2P', cursive;
 }
 
-.navigation a {
-    padding-left: 2.5rem;
-    text-decoration: none;
-    color: rgba(255,255,255,.6);
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.navigation a:hover {
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: rgba(255,255,255,.6);
+    padding: 1rem;
+    display: block;
+}
+
+.navigation li a:hover {
     color: #f80;
     transition: 0.3s ease-in-out;
 }
 
 .menu-btn {
+    position: relative;
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-right: 1rem;
 }
 
-.dropdown {
-    display: none;
-    flex-direction: column;
+.menu-btn__burger {
+    width: 35px;
+    height: 5px;
+    background-color: #f80;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #054ada;
+    width: 35px;
+    height: 5px;
+    background-color: #f80;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
 }
 
-.menu-btn.open + .dropdown {
-    display: flex;
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-30px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg);
 }
 
 .main {
@@ -272,7 +314,7 @@ footer {
     }
 
     .main-text h1 {
-        font-size: 2.25rem;
+        font-size: 2.10rem;
     }
 
     .chart-wrap{
@@ -300,6 +342,7 @@ footer {
     }
 
     .main-text p {
+        width: 100%;
         font-size: 1.25rem;
         text-align: center;
         margin: 1rem;
@@ -322,56 +365,46 @@ footer {
     }
 
     .menu-btn {
-        position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
-        transition: all .5s ease-in-out;
-    }
-    
-    .menu-btn__burger {
-        width: 35px;
-        height: 5px;
-        background-color: #f80;
-        border-radius: 3px;
-        transition: all .5s ease-in-out;
+        position: absolute;
+        right: 3;
+        top: 15;
     }
 
-    .menu-btn__burger::before, .menu-btn__burger::after {
-        content: '';
-        position: absolute;
-        width: 35px;
-        height: 5px;
-        background-color: #f80;
-        border-radius: 3px;
-        transition: all .5s ease-in-out;
-    }
-    
-    .menu-btn__burger::before {
-        transform: translateY(-10px);
-    }
-    
-    .menu-btn__burger::after {
-        transform: translateY(10px);
-    }
-    
-    .menu-btn.open .menu-btn__burger {
-        transform: translateX(-30px);
-        background: transparent;
-    }
-    
-    .menu-btn.open .menu-btn__burger::before {
-        transform: rotate(45deg);
-    }
-    
-    .menu-btn.open .menu-btn__burger::after {
-        transform: rotate(-45deg);
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .navigation {
         display: none;
+        width: 100%;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navigation li {
+        text-align: center;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-text p {
+        font-size: 1rem;
+    }
+
+    .main-text h1 {
+        font-size: 1.25rem;
+    }
+
+    .main-text .tags {
+        font-size: 1rem;
     }
 }
