@@ -13,3 +13,22 @@ menu.addEventListener('click', () => {
         menuOpen = false;
     }
 });
+
+const enhance = id => {
+    for(let i=0; i<=1; i++) {
+        const element = document.getElementsByClassName("fancy")[i];
+    text = element.innerText.split("");
+
+    element.innerText = "";
+
+    text.forEach(letter => {
+        const span = document.createElement("span");
+        span.className = "letter";
+        span.innerText = letter;
+        element.appendChild(span);
+    });
+    }
+    
+}
+
+enhance("channel-link");
